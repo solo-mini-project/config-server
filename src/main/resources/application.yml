@@ -11,6 +11,10 @@ encrypt:
     location: mykeystore.jks
     password: password
     alias: myalias
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
 management:
   endpoints:
     web:
