@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/spring-group-03/config-file-repository-spring-mini-project-group-03.git
+encrypt:
+  key-store:
+    location: mykeystore.jks
+    password: password
+    alias: myalias
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: "shutdown"
+server:
+  port: 8888
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhsost:8761/eureka/
